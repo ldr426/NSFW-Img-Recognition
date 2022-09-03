@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/apple-icon-180x180.png">
+  <link href="/static/assets/favicon.ico" rel="icon">
+
+  <title>Title page</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/webuploader.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/demo.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link href="/static/css/main.3f6952e4.css" rel="stylesheet">
+
+    <style>
+        .div-left{
+        float:left
+        }
+    </style>
+</head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+ <!-- Add your content of header -->
+<header>
+    {% include 'head.html' %}
+</header>
+
+<div class="section-container">
+    <div class="container">
+      <div class="row">
+
+          <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
+            <div class="text-center">
+                <h1 class="h2">03 : 关于本站</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="div-left" >
+                  <h2>网站功能</h2>
+                  <p><h3>本网站将图片识别技术与web网页应用相结合,可以识别图片中是否包含非法内容</h3>
+                 <h3>将需要检测的图片上传至本站,我们会将检测其中是否包含违规信息并将结果返回给您</h3></p>
+                  <h2>关于开源</h2>
+                    <p><h3>本网站后台基于Django开发,使用了众多优秀的开源框架,源代码已发布在<br>
+                    Github:https://github.com/
+                </h3></p>
+                  <h2>与我联系</h2>
+                  <p><h3>欢迎以一下任何方式与我联系:<br>
+                <li>邮箱:110110110@gmail.com</li>
+                <li>微信:110110110</li>
+                <li>qq:1111111111</li></h3></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+<footer class="footer-container text-center">
+    {% include 'footer.html' %}
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+ <script type="text/javascript" src="/static/js/main.70a66962.js"></script></body>
+
+</html>

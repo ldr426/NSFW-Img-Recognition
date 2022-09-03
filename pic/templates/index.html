@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/apple-icon-180x180.png">
+  <title>index</title>
+<link href="/static/css/main.3f6952e4.css" rel="stylesheet">
+</head>
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header-->
+<header>
+    {% include 'head.html' %}
+</header>
+<!-- Add your site or app content here -->
+  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('/static/assets/images/space.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>你好,{{ request.session.user_name }}<br>
+                <span id="typed-strings">
+                  {% if request.session.is_login %}
+                    <span>这是一个违规图片识别的网页应用</span>
+                    <span>如果想开始体验，请点击图片识别</span>
+<!--                    <span>Working as a Freelance</span>-->
+                  {% else %}
+                    <span>这是一个违规图片识别的网页应用</span>
+                    <span>如果你想开始体验，请先登录</span>
+                  {% endif %}
+                </span>
+                <span id="typed"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     type();
+     movingBackgroundImage();
+  });
+</script>
+<script type="text/javascript" src="/static/js/main.70a66962.js"></script></body>
+</html>

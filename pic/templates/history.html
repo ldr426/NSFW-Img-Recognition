@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate"/>
+    <meta content="Mashup templates have been developped by Orson.io team" name="author">
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/apple-icon-180x180.png">
+    <link href="/static/assets/favicon.ico" rel="icon">
+
+    <title>Title page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link href="/static/css/main.3f6952e4.css" rel="stylesheet">
+</head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+    {% include 'head.html' %}
+</header>
+
+<div class="section-container">
+    <div class="container">
+        <div class="text-center">
+             <h2>
+                识别历史记录
+            </h2>
+            <table border="1" align="center" style="font-size: 18px;text-align: center">
+                <tr>
+                    <th style="text-align: center">识别时间</th>
+                    <th style="text-align: center">文件路径</th>
+                    <th style="text-align: center">识别结果</th>
+                </tr>
+                {% for p in path %}
+                    <tr>
+                        <td>{{ p.c_time }}</td>
+                        <td>{{ p.path }}</td>
+                        <td>{{ p.result }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+<div>
+</div>
+</div>
+<footer class="footer-container text-center">
+    {% include 'footer.html' %}
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<script type="text/javascript" src="/static/js/main.70a66962.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/apple-icon-180x180.png">
+    <link href="/static/assets/favicon.ico" rel="icon">
+    <title>register page</title>
+    <link href="/static/css/main.3f6952e4.css" rel="stylesheet">
+    <head/>
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header-->
+<header>
+    {% include 'head.html' %}
+</header>
+<!-- /container -->
+<div class="section-container">
+    <div class="container">
+        <div class="row-input-top">
+            <div class="col-xs-12">
+                <div class="section-container-spacer text-center">
+                    <h1 class="h2">欢迎注册</h1>
+                </div>
+                  <div class="row-input">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form class='form-register' action="{% url 'pic:register' %}" method="post">
+                            {% if message %}
+                            <div class="alert alert-warning">{{ message }}</div>
+                            {% endif %}
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {{ register_form.username}}
+                            </div>
+                            <div class="form-group">
+                                {{ register_form.password1 }}
+                            </div>
+                            <div class="form-group">
+                                {{ register_form.password2 }}
+                            </div>
+                            <div class="form-group">
+                                {{ register_form.captcha.errors }}
+                                {{ register_form.captcha.label_tag }}
+                                {{ register_form.captcha }}
+                            </div>
+                            <button type="reset" class="btn btn-default pull-left">重置</button>
+                            <button type="submit" class="btn btn-primary pull-right">注册</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</head>
+</html>
